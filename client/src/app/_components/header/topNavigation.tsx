@@ -25,7 +25,7 @@ const menuItems: navigationMenuItem[] = [
 
 export const TopNavigation: React.FC = () => {
   return (
-    <nav className="flex items-center font-EstedadMedium text-base text-neutral-g10">
+    <nav className="flex items-center font-[500] text-base text-neutral-g10">
       <ul className="flex gap-10 items-center">
         {menuItems.map((item) => (
           <li key={`navigation-${item.href}`}>

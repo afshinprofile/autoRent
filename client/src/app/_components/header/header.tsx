@@ -16,7 +16,7 @@ export const Header: React.FC = () => {
               height={59}
               priority={true}
             />
-            <p className="text-2xl font-EstedadBlack leading-180">
+            <p className="text-2xl font-[900] leading-180">
               <span className="text-primary">اُتــو</span>
               <span className="text-secondary">رِنت</span>
             </p>
@@ -26,7 +26,7 @@ export const Header: React.FC = () => {
           {/* login/register & userPanel */}
           {/* <Link
             href="#"
-            className="py-1.5 px-4 bg-primary font-EstedadMedium text-white text-base rounded-lg leading-180"
+            className="py-1.5 px-4 bg-primary font-[500] text-white text-base rounded-lg leading-180"
           >
             ورود / ثبت‌نام
           </Link> */}
