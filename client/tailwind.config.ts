@@ -47,6 +47,9 @@ export default {
   theme: {
     extend: {
       colors: autoRentColors,
+      fontFamily: {
+        Estedad: ["var(--font-estedad)"],
+      },
     },
   },
   plugins: [],
