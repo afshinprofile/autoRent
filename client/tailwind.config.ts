@@ -46,6 +46,13 @@ export default {
   content: ["./src/app/**/*.{tsx,jsx}"],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "1rem",
+          lg: "1.75rem",
+        },
+      },
       colors: autoRentColors,
       fontFamily: {
         Estedad: ["var(--font-estedad)"],
