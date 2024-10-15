@@ -1,5 +1,8 @@
 import { Figtree } from "next/font/google";
 import localFont from "next/font/local";
+
+import { Footer } from "./_components/footer";
+import { Header } from "./_components/header";
 import "./globals.css";
 
 const figtree = Figtree({
@@ -26,8 +29,18 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fa" className={`${estedad.variable} ${figtree.variable}`}>
-      <body>{children}</body>
+    <html
+      dir="rtl"
+      lang="fa"
+      className={`${estedad.variable} ${figtree.variable}`}
+    >
+      <body className="min-h-screen grid grid-rows-[auto_1fr_auto]">
+        <Header />
+        <div className="flex flex-1 justify-center items-center">
+          {children}
+        </div>
+        <Footer />
+      </body>
     </html>
   );
 }
