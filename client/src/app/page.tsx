@@ -1,5 +1,7 @@
+import { Colors } from "./_components/colors/colors";
+
 export default function Home() {
   return (
-    <div>autoRent Project</div>
+    <Colors/>
   );
 }
