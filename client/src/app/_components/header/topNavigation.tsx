@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { IconSearchNormal } from "../icons";
 
 const menuItems: navigationMenuItem[] = [
   {
@@ -35,7 +36,7 @@ export const TopNavigation: React.FC = () => {
       </ul>
       {/* searchBar */}
       <div className="mr-[43.18px] cursor-pointer">
-        {/* <SearchNormal1 size={19} color="#5C5F61" variant="Outline" /> */}
+        <IconSearchNormal width={19} height={19} stroke="#5C5F61" />
       </div>
     </nav>
   );

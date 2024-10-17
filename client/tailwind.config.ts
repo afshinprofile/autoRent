@@ -53,6 +53,11 @@ export default {
           lg: "1.75rem",
         },
       },
+      lineHeight: {
+        "80": "0.8",
+        "140": "1.4",
+        "180": "1.8",
+      },
       colors: autoRentColors,
       fontFamily: {
         Estedad: ["var(--font-estedad)"],

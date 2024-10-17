@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { TopNavigation } from "./topNavigation";
+import Link from "next/link";
 
 export const Header: React.FC = () => {
   return (
@@ -24,12 +25,12 @@ export const Header: React.FC = () => {
           {/* menu & searchBar */}
           <TopNavigation />
           {/* login/register & userPanel */}
-          {/* <Link
+          <Link
             href="#"
             className="py-1.5 px-4 bg-primary font-[500] text-white text-base rounded-lg leading-180"
           >
             ورود / ثبت‌نام
-          </Link> */}
+          </Link>
         </div>
       </div>
     </header>
