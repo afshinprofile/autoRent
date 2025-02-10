@@ -51,6 +51,16 @@ gulp.task("icons_component", () => {
                 ],
             })
         )
+        .pipe(replace(/<path([^>]+)>/g, (match, attrs) => {
+            // حذف ویژگی fill
+            let cleanedAttrs = attrs.replace(/\s+fill="[^"]*"/g, '');
+            cleanedAttrs = cleanedAttrs.replace(/(\s*)stroke="[^"]*"/g, '$1stroke="currentColor"');
+            cleanedAttrs = cleanedAttrs.replace(/(\s*)stroke-width="([^"]*)"/g, '$1strokeWidth="$2"');
+            cleanedAttrs = cleanedAttrs.replace(/(\s*)stroke-miterlimit="([^"]*)"/g, '$1strokeMiterlimit="$2"');
+            cleanedAttrs = cleanedAttrs.replace(/(\s*)stroke-linecap="([^"]*)"/g, '$1strokeLinecap="$2"');
+            cleanedAttrs = cleanedAttrs.replace(/(\s*)stroke-linejoin="([^"]*)"/g, '$1strokeLinejoin="$2"');
+            return `<path${cleanedAttrs}>`;
+        }))
         .pipe(replace(/<\/?svg(.*?)>/g, "")) // حذف تگ svg
         .pipe(wrap({ src: jsx_template })) // پیش‌قالب JSX
         .pipe(rename(function (path) {
